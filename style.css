@@ -1,13 +1,11 @@
 .grid {
     height: 35px;
     width: 35px;
-    flex: 0 0 auto;
     border: 4px solid black;
 }
 
 #container {
     display: flex;
-    flex-direction: row;
     flex-wrap:wrap;
     background-color: white;
     width: 700px;
