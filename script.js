@@ -1,12 +1,21 @@
 let container = document.getElementById("container")
-for (let i = 0;i<16;i++){
-    for (let j = 0;j<16;j++){
-        let grid = document.createElement("div")
-        grid.classList.add("grid")
-        grid.addEventListener('mouseover',(event) =>{
-        grid.style.backgroundColor = "red";
-    });
-        container.appendChild(grid)
+
+let button = document.querySelector("button")
+button.addEventListener('click',(event) => {
+    let size = prompt("enter grid size");
+    generateGrid(size);
+
+})
+
+function generateGrid(size){
+    for (let i = 0;i<size;i++){
+        for (let j = 0;j<size;j++){
+            let grid = document.createElement("div")
+            grid.classList.add("grid")
+            grid.addEventListener('mouseover',(event) =>{
+            grid.style.backgroundColor = "red";
+        });
+            container.appendChild(grid)
+        }
     }
 }
-
