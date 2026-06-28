@@ -1,7 +1,8 @@
-let container = document.getElementById("container")
 
+let container = document.getElementById("container")
+let gridBox = document.getElementById("gridBox");
 let button = document.querySelector("button")
-button.addEventListener('click',(event) => {
+button.addEventListener('click',() => {
     let size = prompt("enter grid size");
     generateGrid(size);
 
@@ -15,7 +16,9 @@ function generateGrid(size){
             grid.addEventListener('mouseover',(event) =>{
             grid.style.backgroundColor = "red";
         });
-            container.appendChild(grid)
+            gridBox.appendChild(grid)
         }
     }
 }
+
+
