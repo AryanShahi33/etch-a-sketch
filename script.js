@@ -1,24 +1,22 @@
 
-let container = document.getElementById("container")
+let container = document.getElementById("container");
 let gridBox = document.getElementById("gridBox");
-let button = document.querySelector("button")
+let button = document.querySelector("button");
 button.addEventListener('click',() => {
-    let size = prompt("enter grid size");
-    generateGrid(size);
-
+    let Size = prompt("enter size");
+    generateGrid(Size);
 })
 
-function generateGrid(size){
-    for (let i = 0;i<size;i++){
-        for (let j = 0;j<size;j++){
-            let grid = document.createElement("div")
-            grid.classList.add("grid")
-            grid.addEventListener('mouseover',(event) =>{
-            grid.style.backgroundColor = "red";
-        });
-            gridBox.appendChild(grid)
-        }
+
+function generateGrid(Size){
+
+for (let i = 0;i<Size*Size;i++){
+        let grid =  document.createElement("div");
+        grid.classList.add("Grid");
+        gridBox.appendChild(grid);
     }
+    let gridSize = Size*Size;
+    let gridBoxSize = 1000*1000/gridSize;
+    let gridDimension = Math.sqrt(gridBoxSize) + "px";
+    console.log(gridDimension);
 }
-
-
