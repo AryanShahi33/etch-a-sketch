@@ -9,10 +9,8 @@ button.addEventListener('click',() => {
 })
 
 for (let j = 0;j<256;j++){
-    let r = Math.random() * 256;
-    let g = Math.random() * 256;
-    let b = Math.random() * 256;
-    let defaultGrid = document.createElement("div")
+    let [r,g,b] = rgb();
+    let defaultGrid = document.createElement("div");
     gridBox.appendChild(defaultGrid)
     defaultGrid.style.width = "60px";
     defaultGrid.style.height = "60px";
@@ -30,9 +28,7 @@ function generateGrid(Size){
     let gridBoxSize = 1000*1000/gridSize;
     let gridDimension = Math.round(Math.sqrt(gridBoxSize)-2.5) + "px" ;
 for (let i = 0;i<Size*Size;i++){
-        let r = Math.random() * 256;
-        let g = Math.random() * 256;
-        let b = Math.random() * 256;
+        let [r,g,b] = rgb();
         let grid =  document.createElement("div");
         grid.style.width = gridDimension;
         grid.style.height = gridDimension;
@@ -43,4 +39,11 @@ for (let i = 0;i<Size*Size;i++){
     });
     }
 
+}
+
+function rgb(){
+    let r = Math.random() * 256;
+    let g = Math.random() * 256;
+    let b = Math.random() * 256;
+    return [r,g,b]
 }
