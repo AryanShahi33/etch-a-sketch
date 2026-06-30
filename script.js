@@ -41,8 +41,12 @@ for (let i = 0;i<Size*Size;i++){
         gridBox.appendChild(grid);
         grid.addEventListener('mouseover',(event) => {
         grid.style.backgroundColor = "rgb("+r+","+g+","+b+")";
-    });
+        });
+        button.addEventListener('click',() => {
+        grid.remove()
+        });
     }
+    
 
 }
 
