@@ -5,7 +5,12 @@ let button = document.querySelector("button");
 
 button.addEventListener('click',() => {
     let Size = prompt("enter size");
-    generateGrid(Size);
+    if (Size > 100){
+        return "ERROR";
+    }
+    else{
+        generateGrid(Size);
+    }
 })
 
 for (let j = 0;j<256;j++){
