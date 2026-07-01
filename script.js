@@ -31,7 +31,8 @@ for (let j = 0;j<256;j++){
 function generateGrid(Size){
     let gridSize = Size*Size;
     let gridBoxSize = 1000*1000/gridSize;
-    let gridDimension = Math.round(Math.sqrt(gridBoxSize)-2.5) + "px" ;
+    let gridDimension = Math.sqrt(gridBoxSize)- 2 + "px" ;
+    console.log(gridDimension)
 for (let i = 0;i<Size*Size;i++){
         let [r,g,b] = rgb();
         let grid =  document.createElement("div");
